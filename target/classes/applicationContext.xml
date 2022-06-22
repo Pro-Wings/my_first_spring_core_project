@@ -1,0 +1,31 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean id="helloworld" class="com.pro.wings.HelloWorld">
+		<property name="message" value="Hello Java developers!!!" />
+	</bean>
+
+	<bean id="std" class="com.pro.wings.Student">
+		<!-- <property name="id" value="10"/> <property name="name" value="Ram"/> 
+			<property name="address" value="Pune"/> -->
+
+		<constructor-arg value="10" type="int" />
+		<constructor-arg value="Pune" type="String" />
+		<constructor-arg value="Ram" type="String" />
+	</bean>
+
+<bean id = "emp" class = "com.pro.wings.Employee">
+<constructor-arg value="20" type="int"/>
+<constructor-arg value="Sham" type="String"/>
+<constructor-arg ref = "addr"/>
+</bean>
+
+<bean id = "addr" class = "com.pro.wings.Address">
+<constructor-arg value="1234" type="int" />
+<constructor-arg value="Mumbai" type="String"/>
+</bean>
+
+</beans>
